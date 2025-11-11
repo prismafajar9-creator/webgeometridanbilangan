@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Materi Mengurutkan Perbandingan Pecahan Desimal</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="materi-header">
+    <h1>Materi Bilangan</h1>
+    <p>Belajar Mengurutkan Perbandingan Pecahan Desimal</p>
+  </header>
+
+<main class="materi-page">
+
+  <section class="materi-detail-card">
+    <h2>Mengurutkan dan Membandingkan Pecahan</h2>
+
+    <h3>Pengantar</h3>
+
+    <div class="image-wrapper" style="text-align:center;">
+      <img src="images/pecahan-pengantar.png.png" alt="Contoh Pecahan dalam Kehidupan Sehari-hari" style="max-width: 90%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <p><em>Contoh penggunaan pecahan dalam kehidupan sehari-hari: potongan pizza, jam dinding, resep masakan.</em></p>
+    </div>
+
+    <p>
+      Pecahan adalah konsep matematika yang sering kita temui dalam kehidupan sehari-hari,
+      meskipun kita mungkin tidak selalu menyadarinya. Pecahan digunakan untuk menyatakan
+      bagian dari suatu keseluruhan, baik dalam bentuk angka, benda, atau waktu. Berikut
+      adalah beberapa contoh penggunaan pecahan dalam aktivitas sehari-hari:
+    </p>
+
+    <ol>
+      <li><strong>1. Membagi Makanan</strong>:
+        Ketika kita membagi pizza, kue, atau roti, seringkali kita membaginya menjadi beberapa bagian,
+        seperti 8 potong, yang masing-masing merupakan pecahan 1/8 dari keseluruhan.
+      </li>
+      <li><strong>2. Waktu Pecahan</strong>:
+        Digunakan untuk menyatakan bagian dari jam atau menit. Misalnya, "1/4 jam" berarti 15 menit,
+        atau "1/2 jam" berarti 30 menit.
+      </li>
+      <li><strong> 3. Resep Masakan</strong>:
+        Dalam memasak, kita sering memakai pecahan untuk menentukan jumlah bahan yang diperlukan.
+        Contohnya, jika resep untuk 4 orang membutuhkan 1 cangkir gula, maka untuk 2 orang kita hanya
+        memerlukan 1/2 cangkir gula.
+      </li>
+    </ol>
+
+    <p>
+      Pecahan memudahkan kita untuk menggambarkan dan menyelesaikan berbagai hal dalam kehidupan
+      dengan cara yang lebih terstruktur dan praktis.
+    </p>
+
+  </section>
+
+</main>
+
+<section class="materi-detail-card">
+  <h2>Pengertian Pecahan</h2>
+
+  <p>
+    Pecahan adalah hasil dari pembagian antara bilangan bulat dan bilangan asli.
+    Dalam pecahan, bilangan yang dibagi disebut <strong>pembilang</strong>,
+    sedangkan bilangan yang digunakan untuk membagi disebut <strong>penyebut</strong>.
+    Biasanya, nilai pembilang lebih kecil daripada nilai penyebut, bentuk ini disebut
+    <strong>pecahan biasa</strong>.
+  </p>
+
+<div class="image-wrapper" style="text-align:center;">
+  <img 
+    src="images/pecahan.png" 
+    alt="Pembilang dan Penyebut"
+    class="popup-img"
+    onclick="showPopup(this)"
+    style="max-width: 80%; border-radius: 10px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+  <p><em>Gambar menunjukkan bagian pembilang dan penyebut dalam pecahan</em></p>
+</div>
+
+<!-- Pop-up -->
+<div id="popup-container" class="popup-container" onclick="closePopup()">
+  <span class="close-btn">&times;</span>
+  <img id="popup-image" class="popup-content">
+</div>
+
+<!-- Kotak 1: Contoh Soal Mengurutkan -->
+<section class="materi-detail-card">
+  <h3>Contoh Soal Mengurutkan</h3>
+  <p>Urutkan pecahan berikut dari yang <strong>terbesar ke terkecil</strong>:</p>
+
+  <div class="pecahan-container">
+    <div class="pecahan"><span class="atas">7</span><span class="garis"></span><span class="bawah">8</span></div>
+    <div class="pecahan"><span class="atas">5</span><span class="garis"></span><span class="bawah">8</span></div>
+    <div class="pecahan"><span class="atas">3</span><span class="garis"></span><span class="bawah">8</span></div>
+    <div class="pecahan"><span class="atas">1</span><span class="garis"></span><span class="bawah">8</span></div>
+  </div>
+
+  <h4>Cara Mengerjakan</h4>
+  <p>Penyebut sama → bandingkan pembilang:</p>
+  <p>7 > 5 > 3 > 1</p>
+
+  <!-- Gabungan Jadi + Gambar -->
+  <div class="hasil-visual">
+    <p>Jadi:
+      <span class="pecahan-inline"><span class="atas">7</span><span class="garis"></span><span class="bawah">8</span></span> >
+      <span class="pecahan-inline"><span class="atas">5</span><span class="garis"></span><span class="bawah">8</span></span> >
+      <span class="pecahan-inline"><span class="atas">3</span><span class="garis"></span><span class="bawah">8</span></span> >
+      <span class="pecahan-inline"><span class="atas">1</span><span class="garis"></span><span class="bawah">8</span></span>
+    </p>
+
+    <img src="images/perbandingan-pecahan.png" alt="Visual perbandingan pecahan" class="visual-img">
+    <p><em>Gambar menunjukkan perbandingan bagian pecahan 7—8, 5—8, 3—8, dan 1—8.</em></p>
+  </div>
+</section>
+
+<!-- Kotak 2: Contoh Soal Membandingkan -->
+<section class="materi-detail-card">
+  <h3>Contoh Soal Membandingkan</h3>
+  <p>
+    <span class="pecahan-inline"><span class="atas">5</span><span class="garis"></span><span class="bawah">8</span></span> 
+    dan 
+    <span class="pecahan-inline"><span class="atas">7</span><span class="garis"></span><span class="bawah">12</span></span>
+    <em>bandingkan hasilnya</em>
+  </p>
+
+  <h4>Penyelesaian:</h4>
+  <p>Samakan penyebut:<br>Kelipatan 8 dan 12 = 24</p>
+
+  <p>
+    <span class="pecahan-inline"><span class="atas">5</span><span class="garis"></span><span class="bawah">8</span></span> = 
+    <span class="pecahan-inline"><span class="atas">15</span><span class="garis"></span><span class="bawah">24</span></span>
+  </p>
+
+  <p>
+    <span class="pecahan-inline"><span class="atas">7</span><span class="garis"></span><span class="bawah">12</span></span> = 
+    <span class="pecahan-inline"><span class="atas">14</span><span class="garis"></span><span class="bawah">24</span></span>
+  </p>
+
+  <p>Bandingkan pembilang:
+    <span class="pecahan-inline"><span class="atas">15</span><span class="garis"></span><span class="bawah">24</span></span> >
+    <span class="pecahan-inline"><span class="atas">14</span><span class="garis"></span><span class="bawah">24</span></span>
+  </p>
+
+  <p>Tulis hasil perbandingan:
+    <span class="pecahan-inline"><span class="atas">5</span><span class="garis"></span><span class="bawah">8</span></span> >
+    <span class="pecahan-inline"><span class="atas">7</span><span class="garis"></span><span class="bawah">12</span></span>
+  </p>
+</section>
+
+<section class="materi-detail-card">
+  <h2>Lembar Kerja Interaktif (LKPD1)</h2>
+  <p>Isilah urutan pecahan sesuai perintah. Gunakan tanda “/” untuk menjawab (misalnya: 1/3, 2/3, 3/3).</p>
+
+  <form id="lkpdForm" onsubmit="cekLKPD(event)">
+    <div class="soal">
+      <p><b>1️⃣ Urutkan dari yang terkecil:</b></p>
+      <p>
+        <span class="pecahan"><span>2</span><span class="garis"></span><span>3</span></span>,
+        <span class="pecahan"><span>1</span><span class="garis"></span><span>3</span></span>,
+        <span class="pecahan"><span>4</span><span class="garis"></span><span>3</span></span>,
+        <span class="pecahan"><span>5</span><span class="garis"></span><span>3</span></span>,
+        <span class="pecahan"><span>3</span><span class="garis"></span><span>3</span></span>
+      </p>
+      <input type="text" id="j1" placeholder="Jawaban kamu..." required>
+    </div>
+
+    <div class="soal">
+      <p><b>2️⃣ Urutkan dari yang terkecil:</b></p>
+      <p>
+        <span class="pecahan"><span>2</span><span class="garis"></span><span>3</span></span>,
+        <span class="pecahan"><span>1</span><span class="garis"></span><span>2</span></span>,
+        <span class="pecahan"><span>3</span><span class="garis"></span><span>4</span></span>,
+        <span class="pecahan"><span>4</span><span class="garis"></span><span>5</span></span>,
+        <span class="pecahan"><span>5</span><span class="garis"></span><span>6</span></span>
+      </p>
+      <input type="text" id="j2" placeholder="Jawaban kamu..." required>
+    </div>
+
+    <div class="soal">
+      <p><b>3️⃣ Urutkan dari yang terkecil:</b></p>
+      <p>
+        <span class="pecahan"><span>3</span><span class="garis"></span><span>4</span></span>,
+        <span class="pecahan"><span>2</span><span class="garis"></span><span>5</span></span>,
+        <span class="pecahan"><span>1</span><span class="garis"></span><span>2</span></span>,
+        <span class="pecahan"><span>3</span><span class="garis"></span><span>5</span></span>,
+        <span class="pecahan"><span>4</span><span class="garis"></span><span>5</span></span>
+      </p>
+      <input type="text" id="j3" placeholder="Jawaban kamu..." required>
+    </div>
+
+    <div class="soal">
+      <p><b>4️⃣ Urutkan dari yang terbesar:</b></p>
+      <p>
+        <span class="pecahan"><span>1</span><span class="garis"></span><span>2</span></span>,
+        <span class="pecahan"><span>1</span><span class="garis"></span><span>3</span></span>,
+        <span class="pecahan"><span>2</span><span class="garis"></span><span>5</span></span>,
+        <span class="pecahan"><span>3</span><span class="garis"></span><span>4</span></span>,
+        <span class="pecahan"><span>3</span><span class="garis"></span><span>5</span></span>
+      </p>
+      <input type="text" id="j4" placeholder="Jawaban kamu..." required>
+    </div>
+
+    <div class="soal">
+      <p><b>5️⃣ Urutkan dari yang terbesar:</b></p>
+      <p>
+        <span class="pecahan"><span>4</span><span class="garis"></span><span>8</span></span>,
+        <span class="pecahan"><span>5</span><span class="garis"></span><span>6</span></span>,
+        <span class="pecahan"><span>3</span><span class="garis"></span><span>4</span></span>,
+        <span class="pecahan"><span>4</span><span class="garis"></span><span>5</span></span>,
+        <span class="pecahan"><span>2</span><span class="garis"></span><span>3</span></span>
+      </p>
+      <input type="text" id="j5" placeholder="Jawaban kamu..." required>
+    </div>
+
+    <button type="submit">Kirim Jawaban</button>
+  </form>
+
+  <p id="hasil" style="font-weight:600; margin-top:10px;"></p>
+</section>
+<section class="materi-detail-card">
+  <h2>Lembar Kerja Interaktif (LKPD2)</h2>
+  <p>Bandingkan pecahan dari gambar berikut dengan mengisi tanda "&lt;" atau "&gt;" pada kotak kosong di bawahnya.</p>
+
+  <form id="lkpd2Form" onsubmit="cekLKPD2(event)">
+    <!-- CONTOH -->
+    <div class="soal">
+      <p><strong>Contoh:</strong></p>
+      <img src="images/lkpd2-contoh.png" alt="Contoh Soal" class="gambar-soal">
+      <p>
+        <span class="pecahan"><span class="atas">1</span><span class="garis"></span><span class="bawah">3</span></span>
+        &lt;
+        <span class="pecahan"><span class="atas">2</span><span class="garis"></span><span class="bawah">3</span></span>
+      </p>
+    </div>
+
+    <!-- SOAL 1 -->
+    <div class="soal">
+      <p>1️⃣ Bandingkan pecahan berikut:</p>
+      <img src="images/lkpd2-soal1.png" alt="Soal 1" class="gambar-soal">
+      <p>
+        <span class="pecahan"><span class="atas">3</span><span class="garis"></span><span class="bawah">4</span></span>
+        <input type="text" id="s1" maxlength="1" class="input-tanda" placeholder="&lt; / &gt;">
+        <span class="pecahan"><span class="atas">2</span><span class="garis"></span><span class="bawah">4</span></span>
+      </p>
+    </div>
+
+<!-- SOAL 2 -->
+<div class="soal">
+  <p>2️⃣ Bandingkan pecahan berikut:</p>
+  <img src="images/lkpd2-soal2.png" alt="Soal 2" class="gambar-soal">
+  <p>
+    <span class="pecahan"><span class="atas">2</span><span class="garis"></span><span class="bawah">5</span></span>
+    <input type="text" id="s2" maxlength="1" class="input-tanda" placeholder="&lt; / &gt;">
+    <span class="pecahan"><span class="atas">3</span><span class="garis"></span><span class="bawah">5</span></span>
+  </p>
+</div>
+
+<!-- SOAL 3 -->
+<div class="soal">
+  <p>3️⃣ Bandingkan pecahan berikut:</p>
+  <img src="images/lkpd2-soal3.png" alt="Soal 3" class="gambar-soal">
+  <p>
+    <span class="pecahan"><span class="atas">6</span><span class="garis"></span><span class="bawah">7</span></span>
+    <input type="text" id="s3" maxlength="1" class="input-tanda" placeholder="&lt; / &gt;">
+    <span class="pecahan"><span class="atas">3</span><span class="garis"></span><span class="bawah">7</span></span>
+  </p>
+</div>
+    <button type="submit">Kirim Jawaban</button>
+  </form>
+
+  <p id="hasil2" style="font-weight:600; margin-top:10px;"></p>
+</section>
+<section class="materi-detail-card">
+  <h2>Lembar Kerja Interaktif (LKPD3)</h2>
+  <p class="pengantar">
+    Di pesta ulang tahun, ada tiga buah kue yang dipotong menjadi bagian yang berbeda-beda.
+    Kue pertama dipotong menjadi 4 bagian sama besar, kue kedua menjadi 8 bagian sama besar,
+    dan kue ketiga menjadi 16 bagian sama besar.
+    Jika kamu ingin mengambil potongan kue yang paling besar, mana yang kamu pilih? Jelaskan alasannya!
+  </p>
+
+  <form id="lkpd3Form" onsubmit="cekLKPD3(event)">
+    <h3>Ayo kita selesaikan!</h3>
+
+    <!-- Soal 1 -->
+    <div class="soal-flex">
+      <div class="soal-gambar">
+        <img src="images/lkpd3-soal1.png" alt="Kue 1" />
+      </div>
+      <div class="soal-jawaban">
+        <p><strong>1️⃣</strong> <input id="s1a" type="text" placeholder="..." required> /
+        <input id="s1b" type="text" placeholder="..." required></p>
+      </div>
+    </div>
+
+    <!-- Soal 2 -->
+    <div class="soal-flex">
+      <div class="soal-gambar">
+        <img src="images/lkpd3-soal2.png" alt="Kue 2" />
+      </div>
+      <div class="soal-jawaban">
+        <p><strong>2️⃣</strong> <input id="s2a" type="text" placeholder="..." required> /
+        <input id="s2b" type="text" placeholder="..." required></p>
+      </div>
+    </div>
+
+    <!-- Soal 3 -->
+    <div class="soal-flex">
+      <div class="soal-gambar">
+        <img src="images/lkpd3-soal3.png" alt="Kue 3" />
+      </div>
+      <div class="soal-jawaban">
+        <p><strong>3️⃣</strong> <input id="s3a" type="text" placeholder="..." required> /
+        <input id="s3b" type="text" placeholder="..." required></p>
+      </div>
+    </div>
+
+    <!-- Penalaran -->
+    <div class="penalaran">
+      <p>Jadi bagian kue yang paling besar adalah kue ke <input id="besar" type="text" placeholder="...">
+        karena memiliki <input id="bagianBesar" type="text" placeholder="..."> bagian.</p>
+      <p>Dan bagian kue yang paling kecil adalah kue ke <input id="kecil" type="text" placeholder="...">
+        karena memiliki <input id="bagianKecil" type="text" placeholder="..."> bagian.</p>
+            <!-- Soal Perbandingan Pecahan -->
+    <div class="perbandingan">
+      <p>Isilah titik-titik berikut dengan bilangan pecahan yang sesuai dan berilah notasi lebih dari (>) atau kurang dari (&lt;)</p>
+      <div class="baris-perbandingan">
+        <input id="p1a" type="text" placeholder="..." required> /
+        <input id="p1b" type="text" placeholder="..." required>
+        <input id="p-simbol1" type="text" placeholder=">" required>
+        <input id="p2a" type="text" placeholder="..." required> /
+        <input id="p2b" type="text" placeholder="..." required>
+      </div>
+      <div class="baris-perbandingan">
+        <input id="p3a" type="text" placeholder="..." required> /
+        <input id="p3b" type="text" placeholder="..." required>
+        <input id="p-simbol2" type="text" placeholder="<" required>
+        <input id="p4a" type="text" placeholder="..." required> /
+        <input id="p4b" type="text" placeholder="..." required>
+      </div>
+    </div>
+      <p>Urutan bagian kue dari yang terkecil ke terbesar adalah:
+        <input id="urutan" type="text" placeholder="contoh: 3,2,1">
+      </p>
+    </div>
+
+    <button type="submit" class="btn-kirim">Kirim Jawaban</button>
+  </form>
+
+  <p id="hasil3" class="hasil-nilai"></p>
+</section>
+
+
+<script src="js/style.js"></script>
+  <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <title>Petualangan Bilangan dan Geometri</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<header class="navbar">
+  <div class="nav-left">
+    <img src="images/logo.png" alt="logo" class="logo">
+    <nav class="main-menu">
+      <a class="active" href="#">Home</a>
+      <a href="#materi">Materi</a>
+      <a href="kuis.html">Kuis</a>
+      <a href="evaluasi.html">Evaluasi</a>
+    </nav>
+  </div>
+  <div class="nav-right">
+    <button class="icon" id="searchBtn" title="Cari">🔍</button>
+    <button class="icon" id="settingsBtn" title="Pengaturan">⚙️</button>
+    <button class="icon" id="loginBtn" title="Masuk Siswa">👤</button>
+  </div>
+</header>
+
+<!-- contoh login box -->
+<div id="login-box" class="modal modal_hidden">
+  <div class="modal-box">
+    <h3>Login Siswa</h3>
+    <label>Masukkan NIS</label>
+    <input id="nis" type="text" placeholder="NIS/NIM">
+    <div class="modal-actions">
+      <button id="login-ok">Masuk</button>
+      <button id="login-cancel">Batal</button>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </header>
+  <!-- letakkan sapaan DI SINI -->
+<div id="user-greeting" class="greeting" style="display:none;"></div>
+<button id="logout-btn" class="logout-btn" style="display:none;">Keluar</button>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Petualangan Bilangan & Geometri</h1>
+        <p class="subtitle">Belajar sambil bermain untuk kelas 5 SD</p>
+        <div class="hero-cta">
+          <button onclick="startJourney()">Mulai Petualangan</button>
+          <button onclick="scrollToMateri()">Lihat Materi</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="images/hero.png" alt="hero" class="hero-img">
+      </div>
+    </section>
+  
+    <!-- TABS: Deskripsi | Identitas -->
+    <section class="info-tabs">
+      <div class="tabs">
+        <script>
+  // Fungsi untuk tab Deskripsi & Identitas
+  const tabButtons = document.querySelectorAll(".tab");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // hapus aktif dari semua tab
+      tabButtons.forEach((b) => b.classList.remove("active"));
+      tabContents.forEach((content) => content.classList.add("hidden"));
+
+      // aktifkan tab yang diklik
+      btn.classList.add("active");
+      const targetId = btn.dataset.tab;
+      document.getElementById(targetId).classList.remove("hidden");
+    });
+  });
+</script>
+
+        <button class="tab active" data-tab="deskripsi">Deskripsi</button>
+        <button class="tab" data-tab="identitas">Identitas Pembuat</button>
+      </div>
+
+      <div class="tab-content" id="deskripsi">
+        <p>
+         Pada halaman ini, siswa akan belajar memahami sekaligus menerapkan konsep pecahan dan bangun datar trapesium secara menyeluruh.
+Melalui kegiatan belajar yang interaktif dan disertai contoh soal yang dekat dengan kehidupan sehari-hari, siswa diajak untuk:
+
+Mengurutkan dan membandingkan pecahan dengan benar.
+
+Menyelesaikan berbagai soal cerita yang berkaitan dengan perbandingan pecahan.
+
+Menunjukkan pemahaman terhadap hasil perbandingan pecahan dalam konteks nyata.
+
+Menghitung keliling dan luas trapesium berdasarkan panjang sisi sejajar serta tinggi yang diketahui.
+
+Menerapkan konsep keliling dan luas trapesium untuk memecahkan masalah di sekitar mereka.
+
+Menyajikan hasil perhitungan secara mandiri dan akurat.
+
+Pembelajaran ini dirancang untuk melatih kemampuan berpikir tingkat tinggi (C3–C4) serta keterampilan praktis (P3), sehingga siswa tidak hanya paham konsep matematika, tetapi juga mampu menggunakannya dalam kehidupan sehari-hari.
+        </p>
+      </div>
+
+      <div class="tab-content hidden" id="identitas">
+        <div class="cards">
+          <div class="card-person">
+            <h4>Prisma Fajar Purnamahargi</h4>
+            <p class="nim">230401140138</p>
+          </div>
+          <div class="card-person">
+            <h4>Aminatus Zuhria</h4>
+            <p class="nim">230401140137</p>
+          </div>
+          <div class="card-person">
+            <h4>Fransiska Mita Yunarni</h4>
+            <p class="nim">230401140146</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+     <section id="materi" class="materi-landscape">
+<section id="materi" class="materi-section">
+  <h2>Materi Pembelajaran</h2>
+
+  <div class="materi-container">
+    <a href="materi-bilangan.html" class="materi-card">
+      <img src="images/bilangan.jpg" alt="Bilangan" class="materi-img">
+      <div class="materi-overlay"><h3>Bilangan</h3></div>
+    </a>
+
+    <a href="materi-geometri.html" class="materi-card">
+      <img src="images/geometri.jpg" alt="Geometri" class="materi-img">
+      <div class="materi-overlay"><h3>Geometri</h3></div>
+    </a>
+  </div>
+</section>
+
+    <!-- Inspirasi & Ucapan -->
+    <section class="inspo-ucap">
+      <div class="panel">
+        <h3>Inspirasi</h3>
+        <p>Setiap soal punya rahasia, dan kamu detektifnya!</p>
+      </div>
+      <div class="panel">
+        <h3>Ucapan</h3>
+        <p>Terima kasih sudah bermain dan belajar bersama kami!</p>
+      </div>
+    </section>
+
+    <!-- Daftar Pustaka (collapsible) -->
+    <section class="dapus">
+      <button id="dapusToggle">📚 Lihat Daftar Pustaka</button>
+      <div id="dapusContent" class="collapsed">
+        <ul>
+          <li>Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia. (n.d.). Buku Panduan Guru Matematika untuk SD/MI Kelas V [PDF]. Diakses dari https://static.buku.kemdikbud.go.id/content/pdf/bukuteks/kurikulum21/Matematika-BG-KLS-V.pdf Buku Kemdikbud</li>
+
+         <li> Zenius. (n.d.). Rumus Trapesium – Jenis, Luas, Keliling, dan Contoh Soalnya. Diakses dari https://www.zenius.net/blog/rumus-trapesium-luas-keliling/Zenius+1</li>
+
+          <li>(n.d.). Matematika Kelas 5 Bilangan Desimal (Rangkuman) | PDF. Diakses from https://share.google/jf2r8K27pJfzJZIfT</li>
+
+          <li>(n.d.). YouTube video [Video]. Diakses from https://youtu.be/glzj6RdOtaE?si=iHZEVwVU6KvOBUgq</li>
+
+         <li> (n.d.). YouTube video [Video]. Diakses from https://youtube.com/watch?v=Zdmrb2UwRXI&feature=shared</li>
+          <!-- ganti dengan referensi aslinya nanti -->
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">© 2025 Kelompok 10 Petualangan Bilangan & Geometri</div>
+    <div class="footer-center">
+      <a href="#">Home</a> · <a href="#materi">Materi</a> · <a href="#kuiz">Kuis</a> · <a href="#evaluasi">Evaluasi</a>
+    </div>
+    <div class="footer-right">Universitas Kanjuruhan Malang</div>
+  </footer>
+
+  <!-- simple modals -->
+  <div id="modalLogin" class="modal hidden">
+    <div class="modal-box">
+      <h3>Login Siswa</h3>
+      <p>Masukkan NIS</p>
+      <input id="loginInput" placeholder="NIS" />
+      <div class="modal-actions">
+        <button onclick="doLogin()">Masuk</button>
+        <button onclick="closeModal('modalLogin')">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalSettings" class="modal hidden"> 
+    <div class="modal-box">
+      <h3>Pengaturan</h3>
+      <label><input type="checkbox" id="toggleSound" checked /> Suara aktif</label><br>
+      <label><input type="checkbox" id="toggleTheme" /> Mode gelap</label><br>
+      <div class="modal-actions">
+        <button onclick="closeModal('modalSettings')">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  // ambil semua tautan menu
+  const navLinks = document.querySelectorAll('.main-menu a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      // hapus class 'active' dari semua menu
+      navLinks.forEach(l => l.classList.remove('active'));
+      // tambahkan class 'active' ke menu yang diklik
+      this.classList.add('active');
+    });
+  });
+</script>
+
+<script>
+  // Fungsi untuk tab Deskripsi & Identitas
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabButtons = document.querySelectorAll(".tab");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // hapus aktif dari semua tab
+        tabButtons.forEach((b) => b.classList.remove("active"));
+        tabContents.forEach((content) => content.classList.add("hidden"));
+
+        // aktifkan tab yang diklik
+        btn.classList.add("active");
+        const targetId = btn.dataset.tab;
+        document.getElementById(targetId).classList.remove("hidden");
+      });
+    });
+  });
+</script>
+
+  <script src="js/style.js"></script>
+</body>
+</html>
+
+
+

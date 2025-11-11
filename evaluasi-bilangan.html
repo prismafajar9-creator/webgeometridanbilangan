@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Evaluasi Bilangan</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #e8f1ff;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .soal {
+      text-align: left;
+      margin: 20px 0;
+      font-size: 16px;
+    }
+    button {
+      background: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005fcc;
+    }
+    .kembali {
+      background: #ccc;
+      color: #000;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .fraction {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      line-height: 1.1em;
+    }
+    .fraction > span {
+      display: block;
+      border-top: 2px solid #000;
+      margin: 0 auto;
+      width: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Evaluasi Bilangan</h2>
+    <form id="formBilangan">
+<div class="soal">
+  <p><b>1.</b> Urutkan pecahan berikut dari yang terkecil!</p>
+  <p>1/2, 3/4, 2/3, 1/4</p>
+
+  <p>Urutan yang benar adalah ...</p>
+
+  <label><input type="radio" name="soal1" value="a"> a. 1/4, 1/2, 2/3, 3/4</label><br>
+  <label><input type="radio" name="soal1" value="b"> b. 1/2, 1/4, 2/3, 3/4</label><br>
+  <label><input type="radio" name="soal1" value="c"> c. 3/4, 1/4, 1/2, 2/3</label><br>
+  <label><input type="radio" name="soal1" value="d"> d. 1/2, 2/3, 1/4, 3/4</label>
+</div>
+      <div class="soal">
+        <p>2. Manakah pernyataan berikut yang benar?</p>
+        <label><input type="radio" name="q2" value="a"> a.
+          <span class="fraction"><sup>1</sup><span></span><sub>2</sub></span> &lt;
+          <span class="fraction"><sup>1</sup><span></span><sub>3</sub></span>
+        </label><br>
+        <label><input type="radio" name="q2" value="b"> b.
+          <span class="fraction"><sup>1</sup><span></span><sub>4</sub></span> &gt;
+          <span class="fraction"><sup>1</sup><span></span><sub>2</sub></span>
+        </label><br>
+        <label><input type="radio" name="q2" value="c"> c.
+          <span class="fraction"><sup>3</sup><span></span><sub>4</sub></span> &gt;
+          <span class="fraction"><sup>2</sup><span></span><sub>3</sub></span>
+        </label><br>
+        <label><input type="radio" name="q2" value="d"> d.
+          <span class="fraction"><sup>3</sup><span></span><sub>5</sub></span> &lt;
+          <span class="fraction"><sup>1</sup><span></span><sub>2</sub></span>
+        </label>
+      </div>
+
+      <div class="soal">
+        <p>3. Dari pecahan
+          <span class="fraction"><sup>1</sup><span></span><sub>2</sub></span>,
+          <span class="fraction"><sup>1</sup><span></span><sub>4</sub></span>, dan
+          <span class="fraction"><sup>1</sup><span></span><sub>8</sub></span>,
+          manakah yang nilainya paling besar? Jelaskan alasanmu!</p>
+        <textarea name="q3" rows="3" style="width:100%;border-radius:8px;"></textarea>
+      </div>
+
+      <div class="soal">
+        <p>4. Ani membaca sebuah buku. Hari pertama ia membaca
+          <span class="fraction"><sup>1</sup><span></span><sub>2</sub></span> bagian,
+          hari kedua
+          <span class="fraction"><sup>1</sup><span></span><sub>4</sub></span> bagian.
+          Berapa bagian yang sudah dibaca Ani seluruhnya?</p>
+        <textarea name="q4" rows="3" style="width:100%;border-radius:8px;"></textarea>
+      </div>
+
+      <div class="soal">
+        <p>5. Rani memiliki sebatang cokelat. Ia memakan
+          <span class="fraction"><sup>2</sup><span></span><sub>5</sub></span> bagian
+          pada pagi hari dan
+          <span class="fraction"><sup>3</sup><span></span><sub>5</sub></span> bagian
+          pada sore hari. Apakah cokelat Rani masih tersisa? Jelaskan alasanmu!</p>
+        <textarea name="q5" rows="3" style="width:100%;border-radius:8px;"></textarea>
+      </div>
+
+      <button type="button" onclick="cekNilai()">Kirim Jawaban</button>
+    </form>
+
+    <p id="hasil"></p>
+    <a href="evaluasi.html" class="kembali">← Kembali ke Pilihan Evaluasi</a>
+  </div>
+
+  <script>
+    function cekNilai() {
+      let skor = 0;
+      const kunci = { q1: "a", q2: "c" };
+      const total = Object.keys(kunci).length;
+      for (let k in kunci) {
+        const pilih = document.querySelector(`input[name="${k}"]:checked`);
+        if (pilih && pilih.value === kunci[k]) skor++;
+      }
+      const nilai = Math.round((skor / total) * 100);
+      document.getElementById("hasil").innerText = `Nilai pilihan ganda kamu: ${nilai}`;
+    }
+  </script>
+  <script>
+function hitungNilai() {
+  let nilai = 0;
+  let total = 5; // total 5 soal
+
+  // pilihan ganda
+  if (document.querySelector('input[name="soal1"]:checked')?.value === "a") nilai++;
+  if (document.querySelector('input[name="soal2"]:checked')?.value === "d") nilai++;
+
+  // isian (soal 3–5)
+  const jawaban3 = document.getElementById("jawaban3").value.trim().toLowerCase();
+  const jawaban4 = document.getElementById("jawaban4").value.trim().toLowerCase();
+  const jawaban5 = document.getElementById("jawaban5").value.trim().toLowerCase();
+
+  if (jawaban3.includes("1/2")) nilai++;
+  if (jawaban4.includes("3/4")) nilai++;
+  if (jawaban5.includes("tidak") || jawaban5.includes("0")) nilai++;
+
+  const skor = (nilai / total) * 100;
+  document.getElementById("hasilNilai").innerText = `Nilai kamu: ${skor}`;
+}
+</script>
+<p id="hasilNilai" style="text-align:center; font-weight:bold;"></p>
+
+</body>
+</html>

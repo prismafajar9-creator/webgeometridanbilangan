@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Materi Geometri - Trapesium</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="materi-header">
+    <h1>Materi Geometri Trapesium</h1>
+    <p>Belajar mengenal bentuk, sifat, dan rumus trapesium.</p>
+  </header>
+
+  <main class="materi-page">
+  
+    <section class="materi-detail-card">
+  <h2>Pengantar Trapesium</h2>
+  <p>Trapesium banyak dijumpai dalam kehidupan sehari-hari...</p>
+  <div class="video-wrapper">
+    <iframe 
+      width="800" height="450"
+      src="https://www.youtube.com/embed/blTWh0ZUKSE?si=ZKkr-OZj9CrBgeYd"
+      title="Video pengantar trapesium"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+
+   <section class="materi-detail-card">
+  <h2>Pengertian Trapesium</h2>
+  <div class="materi-content">
+    <div class="materi-text">
+      <p>
+        Trapesium adalah bangun datar dua dimensi yang memiliki empat sisi, di mana tepat dua sisi di antaranya sejajar. 
+        Sisi-sisi yang sejajar ini disebut sebagai alas (biasanya disebut a dan b), 
+        sedangkan sisi-sisi lainnya disebut kaki trapesium. 
+        Tinggi trapesium (t) adalah jarak tegak lurus antara kedua alas tersebut.
+      </p>
+      <p>
+        Rumus luas trapesium dapat diturunkan dengan membagi trapesium menjadi dua bangun yang lebih sederhana, 
+        yaitu dua buah segitiga dan sebuah persegi panjang (atau jajar genjang).
+      </p>
+    </div>
+    <div class="materi-img">
+      <img src="images/trapesium.png" alt="Gambar Trapesium">
+    </div>
+  </div>
+</section>
+
+<!-- Jenis-Jenis Trapesium -->
+<section class="materi-detail-card">
+  <h2>Jenis-Jenis Trapesium</h2>
+  <p>Berikut beberapa bentuk trapesium yang sering dijumpai:</p>
+
+  <div class="jenis-grid">
+    <div class="jenis-item">
+      <img src="images/trapesium-semb.png" alt="Trapesium Sembarang">
+      <h4>Trapesium Sembarang</h4>
+      <p>Trapesium yang keempat rusuknya tidak sama panjang.</p>
+    </div>
+
+    <div class="jenis-item">
+      <img src="images/trapesium-siku.png" alt="Trapesium Siku-Siku">
+      <h4>Trapesium Siku-Siku</h4>
+      <p>Trapesium yang memiliki dua sudut siku-siku.</p>
+    </div>
+
+    <div class="jenis-item">
+      <img src="images/trapesium-samakaki.png" alt="Trapesium Sama Kaki">
+      <h4>Trapesium Sama Kaki</h4>
+      <p>Trapesium dengan sepasang rusuk sejajar dan panjang sisi sama.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sifat-Sifat Trapesium -->
+<section class="materi-detail-card">
+  <h2>Sifat-Sifat Trapesium (Interaktif)</h2>
+  <p>Klik tombol di bawah untuk melihat bagian sifat trapesium pada gambar:</p>
+
+  <div class="trapesium-wrapper">
+    <!-- PENTING: ada atribut xmlns di sini -->
+     <img src="images/trapisium.png" alt="Trapesium">
+
+      <!-- bentuk dasar -->
+      <polygon id="trapesium" points="60,180 240,180 200,80 100,80"
+               fill="#caf0f8" stroke="#023e8a" stroke-width="2" />
+
+      <!-- sisi sejajar (pakai panah di ujung) -->
+      <line id="garis-atas" x1="100" y1="80"  x2="200" y2="80"
+            stroke="red" stroke-width="3" opacity="0"
+            marker-end="url(#arrow)" />
+      <line id="garis-bawah" x1="60"  y1="180" x2="240" y2="180"
+            stroke="red" stroke-width="3" opacity="0"
+            marker-end="url(#arrow)" />
+
+      <!-- titik sudut -->
+      <circle id="sudut-kiri"      cx="60"  cy="180" r="6" fill="orange" opacity="0"/>
+      <circle id="sudut-kanan"     cx="240" cy="180" r="6" fill="orange" opacity="0"/>
+      <circle id="sudut-atasKiri"  cx="100" cy="80"  r="6" fill="orange" opacity="0"/>
+      <circle id="sudut-atasKanan" cx="200" cy="80"  r="6" fill="orange" opacity="0"/>
+
+      <!-- garis simetri (panah di dua ujung) -->
+      <line id="garis-simetri" x1="150" y1="60" x2="150" y2="190"
+            stroke="blue" stroke-width="2" stroke-dasharray="6 6" opacity="0"
+            marker-start="url(#arrow)" marker-end="url(#arrow)" />
+    </svg>
+
+    <div class="penjelasan-trapesium">
+  <h4>Penjelasan Tambahan:</h4>
+  <ul>
+    <li>Sudut kiri = sudut kanan.</li>
+    <li>Memiliki dua diagonal yang tidak sama panjang.</li>
+    <li>Jumlah sudut dalam trapesium adalah 360°.</li>
+    <li>Tidak memiliki simetri lipat (kecuali trapesium sama kaki).</li>
+  </ul>
+</div>
+</section>
+
+<section class="materi-detail-card">
+  <h2>Cara Menemukan Rumus Keliling Trapesium</h2>
+  <p>
+    Sebuah trapesium memiliki sisi-sisi dengan panjang <b>a, b, c,</b> dan <b>d</b>.
+    Maka keliling trapesium dapat dirumuskan sebagai berikut:
+  </p>
+
+  <div class="rumus-box">
+    <p class="rumus">K = a + b + c + d</p>
+  </div>
+
+  <p>Dalam rumus ini:</p>
+  <ul>
+    <li><b>a</b> dan <b>b</b> adalah panjang sisi-sisi sejajar trapesium.</li>
+    <li><b>c</b> dan <b>d</b> adalah panjang sisi-sisi yang tidak sejajar.</li>
+  </ul>
+
+  <h4>Contoh Penerapan:</h4>
+  <p>
+    Misalkan sebuah trapesium memiliki sisi sejajar dengan panjang 10 cm dan 15 cm,
+    serta dua sisi lainnya masing-masing 6 cm dan 7 cm.
+    Maka, keliling trapesium tersebut adalah:
+  </p>
+
+  <div class="contoh-trapesium">
+    <img src="images/trapesium-keliling.png" alt="Trapesium dengan panjang sisi" class="gambar-trapesium">
+    <p><b>Keliling = 10 cm + 15 cm + 6 cm + 7 cm = 38 cm</b></p>
+  </div>
+
+  <h4>Kesimpulan:</h4>
+  <p>
+    Rumus keliling trapesium didapatkan dari konsep dasar keliling, yaitu menjumlahkan
+    panjang semua sisi bangun datar tersebut. Tidak ada proses penurunan rumus yang rumit
+    karena keliling pada dasarnya adalah penjumlahan sederhana.
+  </p>
+</section>
+
+<section class="materi-detail-card">
+  <h2>Cara Menemukan Rumus Luas Trapesium</h2>
+ <img src="images/materi-trapesium2.png" alt="hero" class="hero-img">
+  <p>
+    Berikut adalah penjelasan rinci langkah demi langkah untuk menemukan rumus luas trapesium:
+  </p>
+
+  <ol>
+    <li>
+      <b>Membagi Trapesium Menjadi Bangun Datar yang Dikenal</b><br>
+      Misalkan kita memiliki trapesium ABCD dengan sisi AB dan CD sejajar (alas dan tutup).
+      Tarik garis tinggi dari titik A dan B ke sisi CD, sehingga terbentuk dua segitiga (ADE dan BCF)
+      serta satu persegi panjang (ABFE).
+    </li>
+
+    <li>
+      <b>Menentukan Luas Masing-Masing Bangun Datar</b><br><br>
+      <b>Luas Segitiga ADE:</b><br>
+      Alas = DE, Tinggi = t<br>
+Luas = 
+<span class="pecahan">
+  <span class="atas">1</span>
+  <span class="garis"></span>
+  <span class="bawah">2</span>
+</span>
+× DE × t
+
+      <b>Luas Segitiga BCF:</b><br>
+      Alas = CF, Tinggi = t<br>
+Luas = 
+<span class="pecahan">
+  <span class="atas">1</span>
+  <span class="garis"></span>
+  <span class="bawah">2</span>
+</span>
+× CF × t
+
+      <b>Luas Persegi Panjang ABFE:</b><br>
+      Panjang = AB, Lebar = t<br>
+      Luas = AB × t
+    </li>
+
+    <li>
+      <b>Menjumlahkan Luas Semua Bangun Datar</b><br>
+      Luas trapesium ABCD = Luas ADE + Luas ABFE + Luas BCF
+    </li>
+
+    <li>
+      <b>Menuliskan Rumus Akhir Luas Trapesium</b><br>
+      Luas = 
+<div class="pecahan">
+  <span class="atas">1</span>
+  <div class="garis"></div>
+  <span class="bawah">2</span>
+</div>
+× DE × t
+
+    </li>
+  </ol>
+
+    Luas = 
+<div class="pecahan">
+  <span class="atas">1</span>
+  <div class="garis"></div>
+  <span class="bawah">2</span>
+</div>
+× DE × t
+
+  </div>
+
+  <h4>Kesimpulan:</h4>
+  <p>
+    Rumus luas trapesium diperoleh dengan menjumlahkan luas seluruh bagian bangun datar
+    yang membentuknya, yaitu dua segitiga dan satu persegi panjang.
+    Rumus akhirnya adalah <b> L
+<span class="pecahan">
+  <span class="atas">1</span>
+  <span class="garis"></span>
+  <span class="bawah">2</span>
+</span>
+× (jumlah sisi sejajar) × tinggi.
+</b>
+  </p>
+</section>
+
+<section class="materi-detail-card">
+  <h2>Contoh Soal Luas Trapesium</h2>
+  <p>
+    Sebuah trapesium memiliki sisi sejajar dengan panjang 8 cm dan 12 cm, serta tinggi 5 cm.
+    Maka luas trapesium tersebut adalah:
+  </p>
+
+  <div class="contoh-trapesium">
+    <img src="images/trapesium-luascontoh.png" alt="Trapesium: sisi sejajar 8 cm dan 12 cm, tinggi 5 cm" class="gambar-trapesium">
+  </div>
+
+  <p><b>Luas trapesium dihitung dengan rumus:</b></p>
+
+  <p>
+    L = 
+    <span class="pecahan">
+      <span class="atas">1</span>
+      <span class="garis"></span>
+      <span class="bawah">2</span>
+    </span>
+    × (a + b) × t
+  </p>
+
+  <p>
+    L = 
+    <span class="pecahan">
+      <span class="atas">1</span>
+      <span class="garis"></span>
+      <span class="bawah">2</span>
+    </span>
+    × (8 + 12) × 5
+  </p>
+
+  <p>
+    L = 
+    <span class="pecahan">
+      <span class="atas">1</span>
+      <span class="garis"></span>
+      <span class="bawah">2</span>
+    </span>
+    × 20 × 5 = 50 cm²
+  </p>
+
+  <p><b>Jadi luas trapesiumnya adalah 50 cm².</b></p>
+
+  <h4>Kesimpulan:</h4>
+  <p>
+    Rumus luas trapesium didapatkan dengan membagi trapesium menjadi bangun datar yang lebih sederhana
+    (dua segitiga dan satu persegi panjang), menghitung luas masing-masing, lalu menjumlahkannya.
+    Hasil akhirnya adalah:
+    <span class="pecahan">
+      <span class="atas">1</span>
+      <span class="garis"></span>
+      <span class="bawah">2</span>
+    </span>
+    × (jumlah sisi sejajar) × tinggi.
+  </p>
+</section>
+
+<section class="materi-detail-card">
+  <h2>LKPD Geometri: Keliling Trapesium</h2>
+  <p>Hitunglah keliling trapesium di bawah ini!</p>
+
+  <form id="lkpdKeliling" onsubmit="cekKeliling(event)">
+    
+    <div class="soal">
+      <p>1️⃣ Trapesium pertama:</p>
+      <img src="images/trapesium1.png" alt="Trapesium dengan sisi 8 cm, 5 cm, 7 cm, dan 13 cm" class="gambar-soal">
+      <input type="text" id="k1" placeholder="Jawaban kamu (cm)" required>
+    </div>
+
+    <div class="soal">
+      <p>2️⃣ Trapesium kedua:</p>
+      <img src="images/trapesium2.png" alt="Trapesium dengan sisi 12 cm, 8 cm, 10 cm, dan 18 cm" class="gambar-soal">
+      <input type="text" id="k2" placeholder="Jawaban kamu (cm)" required>
+    </div>
+
+    <div class="soal">
+      <p>3️⃣ Trapesium ketiga:</p>
+      <img src="images/trapesium3.png" alt="Trapesium dengan sisi 12 cm, 16 cm, dan dua sisi miring lainnya" class="gambar-soal">
+      <input type="text" id="k3" placeholder="Jawaban kamu (cm)" required>
+    </div>
+
+    <div class="soal">
+      <p>4️⃣ Trapesium keempat:</p>
+      <img src="images/trapesium4.png" alt="Trapesium dengan sisi 15 m, 5 m, 12 m, dan 20 m" class="gambar-soal">
+      <input type="text" id="k4" placeholder="Jawaban kamu (m)" required>
+    </div>
+
+    <button type="submit">Kirim Jawaban</button>
+  </form>
+
+  <p id="hasilKeliling" style="font-weight:600; margin-top:10px;"></p>
+</section>
+
+<section class="materi-detail-card">
+  <h2>LKPD Geometri: Luas Trapesium</h2>
+  <p>Hitunglah luas masing-masing bangun trapesium di bawah ini!</p>
+
+  <form id="lkpdLuas" onsubmit="cekLuas(event)">
+
+    <div class="soal">
+      <p>1️⃣ Trapesium pertama:</p>
+      <img src="images/luas1.png" alt="Trapesium 1" class="gambar-soal">
+      <input type="text" id="l1" placeholder="Jawaban kamu (cm²)" required>
+    </div>
+
+    <div class="soal">
+      <p>2️⃣ Trapesium kedua:</p>
+      <img src="images/luas2.png" alt="Trapesium 2" class="gambar-soal">
+      <input type="text" id="l2" placeholder="Jawaban kamu (cm²)" required>
+    </div>
+
+    <div class="soal">
+      <p>3️⃣ Trapesium ketiga:</p>
+      <img src="images/luas3.png" alt="Trapesium 3" class="gambar-soal">
+      <input type="text" id="l3" placeholder="Jawaban kamu (cm²)" required>
+    </div>
+
+    <div class="soal">
+      <p>4️⃣ Trapesium keempat:</p>
+      <img src="images/luas4.png" alt="Trapesium 4" class="gambar-soal">
+      <input type="text" id="l4" placeholder="Jawaban kamu (cm²)" required>
+    </div>
+
+    <button type="submit">Kirim Jawaban</button>
+  </form>
+
+  <p id="hasilLuas" style="font-weight:600; margin-top:10px;"></p>
+</section>
+
+<section class="materi-detail-card">
+  <h2>Soal Cerita Trapesium</h2>
+  <p>Jawablah soal cerita berikut dengan menuliskan langkah dan hasilnya di kolom jawaban.</p>
+
+  <form id="lkpdCerita" onsubmit="cekCerita(event)">
+    <div class="grid-cerita">
+      <!-- Soal 1 -->
+      <div class="cerita-card">
+        <p>
+          Sebuah trapesium sama kaki memiliki panjang sisi pendek 10 cm dan tinggi 12 cm. 
+          Sedangkan perbedaan panjang sisi pendek dengan sisi panjang adalah 20 cm. 
+          Berapakah keliling trapesium tersebut?
+        </p>
+        <input type="text" id="c1" placeholder="Jawaban kamu (cm)" required>
+      </div>
+
+      <!-- Soal 2 -->
+      <div class="cerita-card">
+        <p>
+          Sebidang tanah berbentuk trapesium sama kaki. 
+          Panjang sisi sejajarnya 24 m dan 14 m. 
+          Jarak antar sisi sejajar 12 m. 
+          Jika tanah tersebut akan dipagari, berapakah panjang pagar yang dibutuhkan?
+        </p>
+        <input type="text" id="c2" placeholder="Jawaban kamu (m)" required>
+      </div>
+
+      <!-- Soal 3 -->
+      <div class="cerita-card">
+        <p>
+          Sebuah taman kecil berbentuk trapesium memiliki panjang sisi sejajar 10 meter dan 6 meter, 
+          serta tinggi 4 meter. Berapakah luas taman tersebut?
+        </p>
+        <input type="text" id="c3" placeholder="Jawaban kamu (m²)" required>
+      </div>
+
+      <!-- Soal 4 -->
+      <div class="cerita-card">
+        <p>
+          Sebuah bidang tanah berbentuk trapesium dengan panjang sisi sejajar masing-masing 12 m dan 8 m, 
+          serta tinggi 6 m. Berapakah luas bidang tanah tersebut?
+        </p>
+        <input type="text" id="c4" placeholder="Jawaban kamu (m²)" required>
+      </div>
+    </div>
+
+    <button type="submit">Kirim Jawaban</button>
+  </form>
+
+  <p id="hasilCerita" style="font-weight:600; margin-top:10px;"></p>
+</section>
+
+
+<script src="js/style.js"></script>
+    <footer class="materi-footer">
+    <a href="../index.html">← Kembali ke Beranda</a>
+  </footer>
+</body>
+</html>
+

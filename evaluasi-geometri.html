@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluasi Geometri</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gambar-soal {
+      display: block;
+      width: 80%;
+      max-width: 450px;
+      margin: 10px auto;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      background-color: #fafafa;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <main style="text-align:center; padding:30px;">
+    <div class="materi-detail-card" style="max-width:750px; margin:auto;">
+      <h2>Evaluasi Geometri</h2>
+
+      <!-- Soal 1 -->
+      <img src="images/eval-geo1.jpg" alt="Pembahasan Luas Trapesium" class="gambar-soal">
+      <p style="text-align:justify;">
+        1. Sebuah trapesium memiliki panjang sisi sejajar 15 cm dan 25 cm. Jika tinggi trapesium tersebut adalah 10 cm, berapakah luas trapesium tersebut?
+      </p>
+      <label><input type="radio" name="q1" value="a"> A. 400 cm²</label><br>
+      <label><input type="radio" name="q1" value="b"> B. 200 cm²</label><br>
+      <label><input type="radio" name="q1" value="c"> C. 500 cm²</label><br>
+      <label><input type="radio" name="q1" value="d"> D. 150 cm²</label><br><br>
+
+      <!-- Soal 2 -->
+      <img src="images/keliling-trapesium1.jpg" alt="Pembahasan Bingkai Trapesium" class="gambar-soal">
+      <p style="text-align:justify;">
+        2. Dika membuat bingkai foto berbentuk trapesium dari kayu. Panjang sisi atas bingkai adalah 20 cm, dan panjang sisi bawahnya adalah 30 cm. Panjang kedua sisi samping bingkai (sisi miring) masing-masing adalah 15 cm dan 17 cm.
+        Dika ingin menghias sekeliling bingkai tersebut dengan tali. Berapakah panjang tali minimal yang dibutuhkan Dika untuk menghias bingkai tersebut?
+      </p>
+      <textarea id="q2" rows="3" placeholder="Tulis jawabanmu di sini..."></textarea><br><br>
+
+      <!-- Soal 3 -->
+      <p style="text-align:justify;">
+        3. Sebuah trapesium memiliki panjang keempat sisi berturut-turut 8 cm, 12 cm, 5 cm, dan 7 cm. Berapakah keliling trapesium tersebut?
+      </p>
+      <label><input type="radio" name="q3" value="a"> A. 30 cm</label><br>
+      <label><input type="radio" name="q3" value="b"> B. 32 cm</label><br>
+      <label><input type="radio" name="q3" value="c"> C. 42 cm</label><br>
+      <label><input type="radio" name="q3" value="d"> D. 34 cm</label><br><br>
+
+      <button onclick="kirimJawabanGeo()">Kirim Jawaban</button>
+      <p id="hasil-nilai" style="margin-top:20px; font-weight:bold;"></p>
+
+      <button onclick="window.location.href='evaluasi.html'" style="margin-top:10px;">← Kembali ke Pilihan Evaluasi</button>
+    </div>
+  </main>
+
+  <script>
+    function kirimJawabanGeo() {
+      let score = 0;
+
+      // kunci jawaban pilihan ganda
+      const kunciPG = {
+        q1: "a",
+        q3: "b"
+      };
+
+      for (let key in kunciPG) {
+        const jawaban = document.querySelector(`input[name="${key}"]:checked`);
+        if (jawaban && jawaban.value === kunciPG[key]) {
+          score += 10;
+        }
+      }
+
+      // soal isian (no 2)
+      const j2 = document.getElementById("q2").value.trim().toLowerCase();
+      if (j2.includes("82")) score += 10;
+
+      document.getElementById("hasil-nilai").innerText = "Nilai kamu: " + score + " dari 30";
+    }
+  </script>
+</body>
+</html>
